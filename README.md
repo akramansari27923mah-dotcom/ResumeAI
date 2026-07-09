@@ -134,13 +134,13 @@ const firebaseConfig = {
 Clone the repository
 
 ```bash
-git clone https://github.com/your-username/ai-resume-analyzer.git
+git clone https://github.com/akramansari27923mah-dotcom/ResumeAI
 ```
 
 Move into the project
 
 ```bash
-cd ai-resume-analyzer
+cd ResumeAI
 ```
 
 Install dependencies
