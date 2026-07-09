@@ -16,8 +16,8 @@ export default function SignupForm() {
 
   const [showPassword, setShowPassword] = useState(false);
   const [formData, setFormData] = useState(model);
-  const { signup } = useAuth();
-  const { error, loading } = useAuths();
+  const { signup, loginWithGoogle } = useAuth();
+  const { error, loading, googleLoading } = useAuths();
 
   const handelInput = (e) => {
     const input = e.target;
@@ -53,16 +53,23 @@ export default function SignupForm() {
         </div>
 
         <div className="space-y-3">
-          <button className="flex w-full items-center justify-center gap-3 rounded-xl border border-gray-200 py-3 transition text-gray-800 hover:bg-gray-100">
+          <button onClick={loginWithGoogle} className="flex w-full items-center justify-center gap-3 rounded-xl border border-gray-200 py-3 transition text-gray-800 hover:bg-gray-100 cursor-pointer">
             <Image
-              src="https://www.svgrepo.com/show/475656/google-color.svg"
-              alt="Google"
-              className="h-5 w-5"
-              width={100}
-              height={100}
-            />
-            Continue with Google
-          </button>
+                 src="https://www.svgrepo.com/show/475656/google-color.svg"
+                 alt="Google"
+                 className={`h-5 w-5 ${googleLoading && 'animate-spin'}`}
+                width={100}
+                 height={100}
+                       />
+                      {
+                          googleLoading ? (
+                              <span className="font-semibold animate-pulse">
+                                Signing...
+                              </span>
+                          )
+                            : "Continue with Google"
+                        }
+            </button>
         </div>
 
         <div className="my-6 flex items-center">

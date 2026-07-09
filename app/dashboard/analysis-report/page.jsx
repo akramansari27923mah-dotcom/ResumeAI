@@ -1,4 +1,5 @@
 "use client"
+
 const ResumeAnalysis = dynamic(() => import("@/dashboardComponents/AnalysisDetails"), {
   loading: () => (
      <div className="animate-pulse w-full h-150 flex justify-center items-center">
