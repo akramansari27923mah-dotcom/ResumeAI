@@ -13,7 +13,7 @@ export const useAuth = () => {
   const signup = async (datas) => {
     try {
       setLoading(true);
-      const { data } = await api.post("/auth/signup", datas);
+      const { data } = await api.post("/api/auth/signup", datas);
       if (data?.success) {
         showSuccess("Registered your account");
         route.push("/login");
@@ -32,7 +32,7 @@ export const useAuth = () => {
     try {
       setLoading(true);
       setUpdate(true);
-      const { data } = await api.post("/auth/login", datas);
+      const { data } = await api.post("/api/auth/login", datas);
       if (data?.success) {
         showSuccess("Logged in successfully");
         route.push("/");
@@ -50,7 +50,7 @@ export const useAuth = () => {
   };
   const logout = async () => {
     try {
-      await api.post("/auth/logout");
+      await api.post("/api/auth/logout");
       showSuccess("Logout successfully");
       setUpdate(true);
       setUser(null);
@@ -65,7 +65,7 @@ export const useAuth = () => {
     try {
       const googleProvider = new GoogleAuthProvider();
       const { user } = await signInWithPopup(auth, googleProvider);
-      const { uid, displayName, email, photoURL, emailVerified } = user;
+      const { uid, displayName, email, photoURL, } = user;
       const payload = {
         username: displayName,
         googleId: uid,
@@ -73,7 +73,7 @@ export const useAuth = () => {
         image: photoURL,
       };
       setGoogleLoading(true);
-      const { data } = await api.post("/auth/google", payload);
+      const { data } = await api.post("/api/auth/google", payload);
       console.log(data.data.user);
       
       if (data.success) {

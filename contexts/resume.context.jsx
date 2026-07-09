@@ -20,7 +20,7 @@ export const ResumeProvider = ({ children }) => {
     const getHistory = async() => {
       setLoading(true)
       try{
-          const {data} = await api.get('/history')
+          const {data} = await api.get('/api/history')
           console.log(data);
           
           if(data?.success){

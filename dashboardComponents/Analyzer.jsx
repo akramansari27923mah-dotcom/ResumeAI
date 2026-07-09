@@ -34,7 +34,7 @@ export default function PdfUploader() {
       setLoading(true);
 
       const { data } = await api.post(
-        "/groqForAnalyseResume",
+        "/api/groqForAnalyseResume",
         { file: file },
         {
           headers: {
