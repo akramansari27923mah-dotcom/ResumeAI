@@ -1,9 +1,6 @@
 import Link from "next/link";
 import {
   FileText,
-  Linkedin,
-  Twitter,
-  Mail,
 } from "lucide-react";
 
 const productLinks = [
@@ -15,7 +12,6 @@ const productLinks = [
 
 const companyLinks = [
   { title: "About", href: "/about" },
-  { title: "Blog", href: "/blog" },
   { title: "Contact", href: "/contact" },
   { title: "Careers", href: "/careers" },
 ];
@@ -23,7 +19,6 @@ const companyLinks = [
 const legalLinks = [
   { title: "Privacy Policy", href: "/privacy" },
   { title: "Terms of Service", href: "/terms" },
-  { title: "Cookies", href: "/cookies" },
 ];
 
 export default function Footer() {
@@ -33,7 +28,7 @@ export default function Footer() {
 
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
 
-          {/* Logo */}
+        
           <div>
             <div className="flex items-center gap-3">
               <div className="rounded-xl bg-violet-600 p-3">
@@ -49,33 +44,9 @@ export default function Footer() {
               Analyze your resume with AI, improve your ATS score,
               and land more interviews with confidence.
             </p>
-
-            {/* <div className="mt-6 flex gap-4">
-
-              <Link
-                href="#"
-                className="rounded-lg bg-slate-800 p-3 transition hover:bg-violet-600"
-              >
-                <Linkedin size={20} />
-              </Link>
-
-              <Link
-                href="#"
-                className="rounded-lg bg-slate-800 p-3 transition hover:bg-violet-600"
-              >
-                <Twitter size={20} />
-              </Link>
-
-              <Link
-                href="#"
-                className="rounded-lg bg-slate-800 p-3 transition hover:bg-violet-600"
-              >
-                <Mail size={20} />
-              </Link>
-            </div> */}
           </div>
 
-          {/* Product */}
+    
           <div>
             <h3 className="mb-5 text-lg font-semibold text-white">
               Product
@@ -95,7 +66,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Company */}
+  
           <div>
             <h3 className="mb-5 text-lg font-semibold text-white">
               Company
@@ -115,7 +86,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Legal */}
+  
           <div>
             <h3 className="mb-5 text-lg font-semibold text-white">
               Legal

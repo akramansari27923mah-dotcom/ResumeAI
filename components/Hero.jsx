@@ -56,7 +56,7 @@ export default function Hero() {
             <span key={ind}>
                 ⭐
             </span>
-          ))} Trusted by 10,000+ Job Seekers
+          ))} Trusted by 1,000+ Job Seekers
         </p>
 
         

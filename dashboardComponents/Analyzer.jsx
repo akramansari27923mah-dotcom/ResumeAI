@@ -56,7 +56,7 @@ export default function PdfUploader() {
   };
 
   return (
-    <div className="w-full max-w-xl mx-auto h-153 ">
+    <div className="w-full max-w-xl mx-auto md:h-153 h-screen ">
       <div className="text-center my-10">
         <h2 className="text-2xl font-bold text-white">Upload Your Resume</h2>
         <p className="mt-2 text-sm text-gray-500">

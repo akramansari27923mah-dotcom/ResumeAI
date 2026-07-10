@@ -9,7 +9,6 @@ import { useAuth } from "@/hooks/useAuth";
 const navLinks = [
   { name: "Features", href: "#features" },
   { name: "How it Works", href: "#how-it-works" },
-  { name: "Pricing", href: "#pricing" },
   { name: "FAQ", href: "#faq" },
 ];
 
@@ -97,12 +96,31 @@ export default function Navbar() {
 
             <hr />
 
-            <Link href="/login" className="block text-gray-700">
+            {user === null ? (
+            <Link
+              href="/login"
+              className="text-base font-medium px-6 py-3 bg-violet-600 hover:bg-violet-500 transition text-white rounded-xl w-full text-center"
+            >
               Login
+            </Link>
+          ) : (
+            <button
+              onClick={logout}
+              className="text-white border w-full border-red-500/30 cursor-pointer hover:scale-105 active:scale-100 duration-300 transition-all px-4 py-2 rounded-2xl bg-red-500/50 "
+            >
+              Logout
+            </button>
+          )}
+
+           <Link
+              href={`${user ? "/dashboard" : "/signup"}`}
+              className="block rounded-xl bg-violet-600 mt-5 py-3 text-center font-medium text-white"
+            >
+              Dashboard
             </Link>
 
             <Link
-              href="/signup"
+              href={`${user ? "/dashboard/upload-resume" : "/signup"}`}
               className="block rounded-xl bg-violet-600 py-3 text-center font-medium text-white"
             >
               Get Started

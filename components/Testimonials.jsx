@@ -29,7 +29,7 @@ export default function Testimonials() {
   return (
     <section className="bg-slate-50 py-24">
       <div className="mx-auto max-w-7xl px-6">
-        {/* Heading */}
+      
         <div className="mx-auto max-w-2xl text-center">
           <span className="rounded-full bg-violet-100 px-4 py-2 text-sm font-medium text-violet-700">
             Testimonials
@@ -46,14 +46,14 @@ export default function Testimonials() {
           </p>
         </div>
 
-        {/* Cards */}
+        
         <div className="mt-16 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
           {testimonials.map((item) => (
             <div
               key={item.name}
               className="rounded-3xl border border-slate-200 bg-white p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
             >
-              {/* Stars */}
+              
               <div className="mb-6 flex gap-1">
                 {Array.from({ length: 5 }).map((_, index) => (
                   <Star
@@ -64,10 +64,10 @@ export default function Testimonials() {
                 ))}
               </div>
 
-              {/* Review */}
+          
               <p className="leading-7 text-slate-600">{item.review}</p>
 
-              {/* User */}
+          
               <div className="mt-8 flex items-center gap-4">
                 <Image
                   src={item.image}
@@ -87,10 +87,10 @@ export default function Testimonials() {
           ))}
         </div>
 
-        {/* Stats */}
+        
         <div className="mt-20 grid grid-cols-2 gap-8 rounded-3xl bg-violet-600 p-10 text-center text-white md:grid-cols-4">
           <div>
-            <h3 className="text-4xl font-bold">10K+</h3>
+            <h3 className="text-4xl font-bold">1K+</h3>
             <p className="mt-2 text-violet-100">Users</p>
           </div>
 
@@ -100,7 +100,7 @@ export default function Testimonials() {
           </div>
 
           <div>
-            <h3 className="text-4xl font-bold">50K+</h3>
+            <h3 className="text-4xl font-bold">1.5K+</h3>
             <p className="mt-2 text-violet-100">Resumes Analyzed</p>
           </div>
 
