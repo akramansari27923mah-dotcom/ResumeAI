@@ -56,7 +56,7 @@ const HistoryPage = () => {
           </p>
         </div>
       ) : (
-        <div className="space-y-5 bg-white  rounded-2xl p-3 grid grid-cols-3 justify-center gap-5 items-center">
+        <div className="space-y-5 bg-white  rounded-2xl p-3 grid md:grid-cols-3 justify-center gap-5 items-center">
           {history?.map((item, index) => (
             <div
               key={index}
